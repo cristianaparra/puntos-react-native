@@ -11,15 +11,9 @@ export default () => {
 };
 
 const styles = StyleSheet.create({
-  map: {
-      height: Dimensions.get("window").height - 150,
-      width: Dimensions.get("window").width,
-    },
-    panel: {
-        flex: 1,
-
+  panel: {
+    flex: 1,
     flexDirection: "row",
-    backgroundColor: "#eee",
     justifyContent: "center",
     alignItems: "center",
   },

@@ -1,15 +1,18 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { Map, Modal, Panel } from './components'
+import { Map, Modal, Panel } from "./components";
 
 export default function App() {
+  const handleLongPress = ({nativeEvent}) => {
+    console.log(nativeEvent);
+  };
   return (
     <View style={styles.container}>
-      <Map />
-      <Modal />
+      <Map onLongPress={handleLongPress} />
       <Panel />
-      
+      <Modal />
+
       <StatusBar style="auto" />
     </View>
   );
