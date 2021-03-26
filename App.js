@@ -31,7 +31,7 @@ setVisibilityFilter('new_puntos')
   console.log(puntos);
   return (
     <View style={styles.container}>
-      <Map onLongPress={handleLongPress} />
+      <Map onLongPress={handleLongPress}  puntos={puntos}/>
       <Panel onPressLeft={handleList} textLeft='Lista'/>
       <Modal visibility={visibility}>
         {visibilityFilter === 'new_puntos'
