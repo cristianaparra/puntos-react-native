@@ -8,19 +8,34 @@ export default ({ puntos }) => {
       <View style={styles.list}>
         <FlatList
           data={puntos.map((x) => x.name)}
-          renderItem={({ item }) => <Text> {item}</Text>}
+          renderItem={({ item }) => (
+            <View style={styles.item}>
+              {<Text>{item}</Text>}
+            </View>
+          )}
           keyExtractor={(item) => item}
         />
       </View>
-      <View>
-          <Button title='Cerrar'/>
+      <View style={styles.button}>
+        <Button title="Cerrar" />
       </View>
     </>
   );
 };
 
 const styles = StyleSheet.create({
+  button: {
+    paddingBottom:    15
+  },
   list: {
-   height: Dimensions.get('window').height -450
-  }
+    height: Dimensions.get("window").height - 450,
+    
+  },
+  item: {
+    borderBottomWidth:1,
+    borderColor: '#ccc',
+    height:50,
+    justifyContent: 'center',
+    padding: 15,
+  },
 });

@@ -17,8 +17,9 @@ export default ({children,visibility}) => {
 const styles = StyleSheet.create({
     modalView: {
       backgroundColor: "#fff",
+      minWidth: Dimensions.get('window').width - 100,
       borderRadius: 4,
-      padding: 20,
+      padding: 0,
       shadowColor: "#000",
       shadowOffset: {
         width: 0,
