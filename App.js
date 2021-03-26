@@ -36,15 +36,15 @@ setVisibilityFilter('new_puntos')
       <Modal visibility={visibility}>
         {visibilityFilter === 'new_puntos'
         ?
-        <>
+        <View style={styles.form}>
         <Input
           title="Nombre"
           placeholder="Nombre del Punto"
           onChangeText={handleChangeText}
         />
         <Button  title='Aceptar' onPress={handleSubmit}/>
-        </>
-        :<List puntos={puntos}/>
+        </View>
+        :<List puntos={puntos} closeModal={() => setVisibility(false)}/>
 
       }
       </Modal>
@@ -55,6 +55,9 @@ setVisibilityFilter('new_puntos')
 }
 
 const styles = StyleSheet.create({
+  form:{
+    padding:15
+  },
   container: {
     flex: 1,
     backgroundColor: "#fff",
